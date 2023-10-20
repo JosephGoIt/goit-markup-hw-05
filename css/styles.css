@@ -127,12 +127,13 @@ img {
 .link:hover,
 .link:focus {
     color: var(--OCEAN);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list .link:hover,
+/* .nav-list .link:hover,
 .nav-list .link:focus {
     text-decoration-line: underline;
-}
+} */
 
 .active {
     color: var(--ocean);
@@ -183,6 +184,58 @@ img {
     background-color: var(--OCEAN);
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+    padding-top: 70px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+}
+
+.modal {
+    width: 408px;
+    height: 584px;
+    background-color: var(--WHITE);
+    border-radius: 4px;
+    position: relative;
+
+
+}
+
+.modal-close-btn svg {
+    width: 100%;
+    height: 100%;
+
+}
+
+.modal-close-btn {
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    background-color: var(--WHITE);
+    width: 30px;
+    height: 30px;
+    /* margin-left: auto; */
+    /* display: block; */
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    cursor: pointer;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /*Service section or section 1*/
@@ -258,6 +311,7 @@ img {
 
 .team-card:hover, .team-card:focus {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-members {
@@ -310,6 +364,8 @@ img {
 .client-icon:focus {
 border-color: var(--OCEAN);
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon .icon {
@@ -321,6 +377,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .client-icon .icon:hover,
 .client-icon .icon:focus {
     fill: var(--OCEAN);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon svg{
@@ -410,8 +467,9 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .filter-button:focus {
     background-color: var(--CORNFLOWER);
     border-radius: 4px;
-    /* box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.75); */
+    box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.75);
     cursor: pointer;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-one {
@@ -446,6 +504,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .section-card:hover, .section-card:focus {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-card:hover .project-image-caption {
@@ -497,6 +556,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .team-profile .icon-container:hover,
 .team-profile.icon-container:focus {
     background-color: var(--GREEN);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-container .icon{
